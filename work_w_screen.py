@@ -1,7 +1,7 @@
 import numpy as np
 import cv2
 
-Number_cascade = cv2.CascadeClassifier(r'C:\Users\Frappy\Documents\python\Cascades\haarcascades\haarcascade_frontalface_default.xml')
+Number_cascade = cv2.CascadeClassifier(r'.\Cascades\haarcascades\haarcascade_russian_plate_number.xml')
 cap = cv2.VideoCapture(0)
 crop = 0
 cropg = 0
