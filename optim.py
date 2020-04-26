@@ -7,6 +7,7 @@ Number_cascade = cv2.CascadeClassifier(r'.\Cascades\haarcascades\haarcascade_rus
 #cap = cv2.VideoCapture(0)
 crop = 0
 cropg = 0
+speed = 10
 while True:
     img = cv2.imread(r'.\img\13.jpg')
     back = cv2.imread(r'.\img\back.jpg')
@@ -40,7 +41,11 @@ while True:
 
     #back[0:599, 250:1150] = resized
     back[0:532, 0:800] = resized
-    cv2.putText(back, "some shitty text like speed or another))", (220, 550),cv2.FONT_HERSHEY_COMPLEX_SMALL, 0.7, (255, 255, 255), 1) 
+    cv2.putText(back, ("Speed: "+str(speed)+" Km/h"), (220, 550),cv2.FONT_HERSHEY_COMPLEX_SMALL, 0.7, (255, 255, 255), 1)
+    if (speed > 200):
+        speed = speed - 5
+    else:
+        speed = speed + 7 
 
 
 
